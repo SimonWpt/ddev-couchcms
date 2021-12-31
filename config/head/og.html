@@ -1,0 +1,24 @@
+<cms:hide>
+    <cms:editable name="meta" label="Metadaten" desc="Inhalte, die beim Teilen auf Facebook oder Whatsapp angezeigt werden." type="group" collapsed="1" order="50"/>
+    <cms:editable name="meta_title" order="1" group="meta" label="Titel" type="text"/>
+    <cms:editable name="meta_desc" order="2" group="meta" label="Beschreibung" type="text"/>
+    <cms:editable name="meta_img" order="4" group="meta" label="Image" type="image"/>
+    <cms:editable name='meta_thumb' order="6" group='meta' label='Foto Ausschnitt' type='thumbnail' show_preview='1' preview_width='150' width='1200' height='630' quality='92' assoc_field='meta_img' />
+</cms:hide>
+
+<cms:if "<cms:get_global 'meta_title' />">
+    <cms:set meta_title="<cms:get 'meta_title' default="<cms:get_global 'meta_title' />" />"/>
+<cms:else/>
+    <cms:set meta_title="<cms:get 'meta_title' default=k_page_title />"/>
+</cms:if>
+<cms:if "<cms:get_global 'meta_desc' />">
+    <cms:set meta_desc="<cms:get 'meta_desc' default="<cms:get_global 'meta_desc' />" />" />
+<cms:else/>
+    <cms:set meta_desc="<cms:get 'meta_desc' default=subline />" />
+</cms:if>
+<cms:if "<cms:get_global 'meta_img' />">
+    <cms:set meta_img="<cms:get_global 'meta_thumb' />" />
+<cms:else/>
+    <cms:set meta_img="<cms:get 'meta_thumb' />" />
+</cms:if>
+<cms:set meta_url="<cms:show k_page_link />" />

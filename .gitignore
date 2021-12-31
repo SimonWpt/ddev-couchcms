@@ -1,0 +1,9 @@
+/.idea
+/web/couch/**
+!/web/couch/addons
+!/web/couch/addons**
+/uploads
+!/.ddev/docker-compose.couch.yaml
+/node_modules/
+/_db.php
+
