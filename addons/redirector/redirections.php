@@ -1,5 +1,5 @@
 <?php require_once("couch/cms.php"); ?>
-<cms:template title='Redirections' clonable='0' executable='0' parent='_modules_' order='100'>
+<cms:template title='Redirections' clonable='0' executable='0' parent='_modules_' order='100' icon='loop'>
 
     <cms:repeatable name='redirections' label='Redirections' order='-1'>
         <cms:editable name='match' label='Match' type='dropdown' opt_values='Simple=simple | RegEx=regex' opt_selected='simple' col_width='100' />

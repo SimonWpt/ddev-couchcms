@@ -19,8 +19,10 @@ git clone --depth=1 --branch=master https://github.com/SimonWpt/tiny-html-minifi
 rm -rf ./tiny-html-minifier/.git
 mv ./tiny-html-minifier ./web/couch/addons
 
-# Install redirector addon from forum
+# Install addons from forum
 cp -r ./addons ./web/couch
+mv ./web/couch/addons/redirector/redirections.php ./web
+
 
 # Create directories
 mkdir -p ./web/snippets/
@@ -34,14 +36,15 @@ mkdir -p ./web/assets/images
 mkdir -p ./web/assets/js
 mkdir -p ./web/assets/scss
 
+
 # Copy config and additional files
 cp -n ./config/_config.php ./web
 cp -n ./config/_db.php ./web
-cp -n ./config/config.php ./web/couch
+cp ./config/config.php ./web/couch
 cp -n ./config/humans.txt ./web
 cp -n ./config/index.php ./web
-cp -n ./config/kfunctions.php ./web/couch/addons
+cp ./config/kfunctions.php ./web/couch/addons
 cp -n ./config/robots.txt ./web
-cp -n ./config/sitemap.php ./web
+cp ./config/sitemap.php ./web
 cp -r ./config/head ./web/snippets
 cp -r ./config/icons ./web/assets

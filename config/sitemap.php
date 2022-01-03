@@ -4,7 +4,7 @@
 https://www.couchcms.com/forum/viewtopic.php?f=8&t=11000#
 </cms:ignore>
 <cms:content_type 'text/xml' /><cms:concat '<' '?xml version="1.0" encoding="' k_site_charset '"?' '>' />
-<cms:template title='Sitemap' parent='_modules_' >
+<cms:template title='Sitemap' parent='_modules_' icon='list' >
 	<cms:editable type='group' name='pages' label='Pages' >
 		<cms:templates show_hidden='1' order='asc'>
 			<cms:if k_template_is_executable='1'>
