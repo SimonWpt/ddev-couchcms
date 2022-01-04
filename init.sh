@@ -44,6 +44,7 @@ cp ./config/config.php ./web/couch
 cp -n ./config/humans.txt ./web
 cp -n ./config/index.php ./web
 cp ./config/kfunctions.php ./web/couch/addons
+cp ./config/_kfunctions.php ./web
 cp -n ./config/robots.txt ./web
 cp ./config/sitemap.php ./web
 cp -r ./config/head ./web/snippets
