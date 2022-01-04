@@ -1,0 +1,40 @@
+Options +SymLinksIfOwnerMatch -MultiViews
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+#If your website is installed in a subfolder, change the line below to reflect the path to the subfolder.
+#e.g. for http://www.example.com/subdomain1/subdomain2/ make it RewriteBase /subdomain1/subdomain2
+RewriteBase /
+
+#If you wish to use a custom 404 page, place a file named 404.php in your website's root and uncomment the line below.
+#If your website is installed in a subfolder, change the line below to reflect the path to the subfolder.
+#e.g. for http://www.example.com/subdomain1/subdomain2/ make it ErrorDocument 404 /subdomain1/subdomain2/404.php
+#ErrorDocument 404 /404.php
+
+#If your site begins with 'www', uncomment the following two lines
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Compress text files
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/shtml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Create Sitemap.xml from sitemap.php
+RewriteRule ^sitemap.xml? sitemap.php
+
+###
+# IF PRETTY URLS, ADD HERE THE CONTENT FROM /couch/gen_htaccess.php
+#
+# see https://docs.couchcms.com/concepts/pretty-urls.html
+##
+</IfModule>

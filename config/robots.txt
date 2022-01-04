@@ -1,2 +1,7 @@
+# Don't index pages while on working
 User-agent: *
 Disallow: /
+# Allow: /
+
+# If ready, activate sitemap for search robots
+# Sitemap: https://www.domain.de/sitemap.xml

@@ -2,7 +2,7 @@
 <cms:ignore>
 	The sitemap is made by Bartonsweb, the code is taken from
 https://www.couchcms.com/forum/viewtopic.php?f=8&t=11000#
-</cms:ignore>
+</cms:ignore><cms:minify>
 <cms:content_type 'text/xml' /><cms:concat '<' '?xml version="1.0" encoding="' k_site_charset '"?' '>' />
 <cms:template title='Sitemap' parent='_modules_' icon='list' >
 	<cms:editable type='group' name='pages' label='Pages' >
@@ -27,14 +27,12 @@ https://www.couchcms.com/forum/viewtopic.php?f=8&t=11000#
 	</cms:editable>
 </cms:template>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-            
-
-   <cms:templates show_hidden='1' order='asc' > 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+   <cms:templates show_hidden='1' order='asc' >
 		<cms:if k_template_is_clonable="1" && k_template_is_executable="1">
 			<cms:if "<cms:get "tpl_<cms:show k_template_id />_page" />">
 				<url>
@@ -97,4 +95,5 @@ https://www.couchcms.com/forum/viewtopic.php?f=8&t=11000#
 		</cms:if>
    </cms:templates>
 </urlset>
+</cms:minify>
 <?php COUCH::invoke(); ?>

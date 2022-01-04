@@ -39,6 +39,7 @@ mkdir -p ./web/assets/scss
 
 # Copy config and additional files
 cp -n ./config/_config.php ./web
+cp -n ./config/htaccess.txt ./web/.htaccess
 cp -n ./config/_db.php ./web
 cp ./config/config.php ./web/couch
 cp -n ./config/humans.txt ./web
