@@ -1,3 +1,3 @@
 <?php
-$folder = dirname(dirname(__FILE__));
+$folder = dirname(__FILE__, 2);
 require $folder.'/_config.php';
