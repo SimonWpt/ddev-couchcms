@@ -19,6 +19,16 @@ git clone --depth=1 --branch=master https://github.com/SimonWpt/tiny-html-minifi
 rm -rf ./tiny-html-minifier/.git
 mv ./tiny-html-minifier ./web/couch/addons
 
+# Install addhash addon
+git clone --depth=1 --branch=master https://github.com/SimonWpt/addhash.git
+rm -rf ./addhash/.git
+mv ./addhash ./web/couch/addons
+
+# Install spaceless addon
+git clone --depth=1 --branch=master https://github.com/SimonWpt/spaceless.git
+rm -rf ./spaceless/.git
+mv ./spaceless ./web/couch/addons
+
 # Install addons from forum
 cp -r ./addons ./web/couch
 mv ./web/couch/addons/redirector/redirections.php ./web
@@ -50,3 +60,6 @@ cp -n ./config/robots.txt ./web
 cp ./config/sitemap.php ./web
 cp -r ./config/head ./web/snippets
 cp -r ./config/icons ./web/assets
+
+touch ./web/assets/css/main.min.css
+touch ./web/assets/scss/main.scss

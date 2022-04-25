@@ -7,7 +7,7 @@
     <title><cms:show meta_title/></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="<cms:show meta_desc />">
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <link rel="stylesheet" href="<cms:addhash>/assets/css/main.min.css</cms:addhash>">
     <cms:embed 'head/favicon.html' />
     <meta property="og:title"       content="<cms:show meta_title />" >
     <meta property="og:description" content="<cms:show meta_desc />" >

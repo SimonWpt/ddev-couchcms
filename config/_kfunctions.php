@@ -6,6 +6,8 @@ if (!defined('K_COUCH_DIR')) {
 require_once(K_COUCH_DIR . 'addons/bootstrap-grid/bootstrap-grid.php');
 require_once(K_COUCH_DIR . 'addons/phpmailer/phpmailer.php');
 require_once(K_COUCH_DIR . 'addons/tiny-html-minifier/TinyMinify.php');
+require_once(K_COUCH_DIR . 'addons/addhash/addhash.php');
+require_once(K_COUCH_DIR . 'addons/spaceless/spaceless.php');
 
 /*
  * Tweaking Ckeditor
